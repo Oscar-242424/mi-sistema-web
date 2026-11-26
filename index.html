@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Game Store </title>
+  <link rel="stylesheet" href="css/stylegam.css">
+</head>
+<body>
+  <main class="login">
+    <section class="login__brand" aria-hidden="true">
+      <h1 class="login__logo">Game Store</h1>
+      <p>Videojuegos, consolas y controles a precios muy bajos.</p>
+    </section>
+    <section class="login__panel">
+      <h2>Ingresa a tu cuenta</h2>
+      <form id="formLogin" novalidate>
+        <label for="usuario">Usuario o correo electrónico</label>
+        <input type="text" id="usuario" autocomplete="username">
+        <label for="clave">Contraseña</label>
+        <div class="campo-clave">
+          <input type="password" id="clave" autocomplete="current-password">
+          <button type="button" id="verClave" aria-label="Mostrar contraseña">Ver</button>
+        </div>
+        <p id="mensaje" class="mensaje" role="alert"></p>
+        <button type="submit" class="btn">Ingresar</button>
+      </form>
+      <p class="ayuda">Prueba con <b>admin</b> / admin123 (puede registrar productos) o <b>cliente</b> / 1234.</p>
+    </section>
+  </main>
+  <script src="js/scriptgam.js"></script>
+</body>
+</html>

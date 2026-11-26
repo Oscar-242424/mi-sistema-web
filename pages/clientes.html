@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Game Store | Clientes</title>
+  <link rel="stylesheet" href="../css/styleindex.css">
+</head>
+<body>
+  <header class="header">
+    <a href="inicio.html" class="header__logo">Game Store</a>
+    <nav class="header__links" aria-label="Principal">
+      <a href="inicio.html">Inicio</a>
+      <a href="catalogo.html">Productos</a>
+      <a href="clientes.html" aria-current="page">Clientes</a>
+    </nav>
+    <div class="header__usuario">
+      <span id="saludo"></span>
+      <button id="btnSalir" class="btn-linea">Cerrar sesión</button>
+    </div>
+  </header>
+
+  <main class="pagina">
+    <h1 class="titulo">Registro de clientes</h1>
+
+    <section class="caja" aria-labelledby="tForm">
+      <h2 id="tForm">Nuevo cliente</h2>
+      <form id="formCliente" class="form-clientes" novalidate>
+        <div class="campo"><label for="cNombre">Nombre completo</label><input type="text" id="cNombre" autocomplete="name"></div>
+        <div class="campo"><label for="cCorreo">Correo electrónico</label><input type="email" id="cCorreo" autocomplete="email"></div>
+        <div class="campo"><label for="cTelefono">Teléfono</label><input type="tel" id="cTelefono" inputmode="numeric" autocomplete="tel"></div>
+        <div class="campo"><label for="cCiudad">Ciudad</label><input type="text" id="cCiudad"></div>
+        <div class="campo"><label for="cPlataforma">Plataforma favorita</label>
+          <select id="cPlataforma">
+            <option>PC</option><option>PlayStation</option><option>Xbox</option><option>Nintendo</option><option>Celular</option>
+          </select>
+        </div>
+        <div class="campo campo--boton"><button type="submit" class="btn">Registrar cliente</button></div>
+        <p id="msgCliente" class="msg" role="alert"></p>
+      </form>
+    </section>
+
+    <section aria-labelledby="tLista">
+      <div class="catalogo__cabecera">
+        <h2 id="tLista" class="titulo">Clientes registrados</h2>
+        <p id="contadorClientes"></p>
+      </div>
+      <div class="tabla-wrap">
+        <table>
+          <thead><tr><th>Nombre</th><th>Correo</th><th>Teléfono</th><th>Ciudad</th><th>Plataforma</th><th>Acción</th></tr></thead>
+          <tbody id="tablaClientes"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 Game Store. Todos los derechos reservados.</p>
+    <p>Atención: lunes a sábado, 9:00 a 19:00</p>
+  </footer>
+
+  <script src="../js/datos.js"></script>
+  <script src="../js/comun.js"></script>
+  <script src="../js/scriptclientes.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+:root{--bg:#0D1117;--card:#161B22;--linea:#30363D;--neon:#00E5FF;--lila:#B388FF;--texto:#E6EDF3;--gris:#8B949E;--error:#FF6B6B;--ok:#3DDC84}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,sans-serif;background:var(--bg);color:var(--texto);min-height:100vh}
+:focus-visible{outline:3px solid var(--neon);outline-offset:2px}
+.login{display:grid;grid-template-columns:1.1fr 1fr;min-height:100vh}
+.login__brand{display:flex;flex-direction:column;justify-content:flex-end;gap:1rem;padding:3rem;background:linear-gradient(135deg,#0d1b2a,#1b1030)}
+.login__logo{font-family:system-ui,sans-serif;font-weight:900;font-size:clamp(2.6rem,7vw,5.5rem);line-height:1.05;color:var(--neon);text-shadow:0 0 24px rgba(0,229,255,.55)}
+.login__brand p{max-width:28ch;font-size:1.15rem;line-height:1.5;color:var(--gris)}
+.login__panel{display:flex;flex-direction:column;justify-content:center;padding:3rem clamp(1.5rem,6vw,5rem);max-width:560px}
+.login__panel h2{font-family:system-ui,sans-serif;font-size:1.6rem;margin-bottom:2rem}
+form{display:flex;flex-direction:column;gap:.5rem}
+label{font-weight:600;font-size:.95rem;margin-top:.75rem}
+input{width:100%;padding:.85rem 1rem;background:var(--card);color:var(--texto);border:2px solid var(--linea);border-radius:6px;font:inherit}
+input:focus{border-color:var(--neon);outline:none;box-shadow:0 0 0 3px rgba(0,229,255,.25)}
+.campo-clave{position:relative}
+.campo-clave input{padding-right:4.5rem}
+.campo-clave button{position:absolute;right:.5rem;top:50%;transform:translateY(-50%);background:none;border:0;color:var(--neon);font-weight:700;cursor:pointer;padding:.4rem}
+.mensaje{min-height:1.4rem;margin-top:.5rem;color:var(--error);font-size:.92rem}
+.mensaje.ok{color:var(--ok)}
+.btn{margin-top:.5rem;padding:.95rem 1rem;border:0;border-radius:6px;background:var(--neon);color:var(--bg);font:inherit;font-weight:700;cursor:pointer;box-shadow:0 0 16px rgba(0,229,255,.45)}
+.btn:hover{filter:brightness(1.1)}
+.ayuda{margin-top:2rem;color:var(--gris);font-size:.88rem;line-height:1.6}
+@media(max-width:760px){.login{grid-template-columns:1fr}.login__brand{min-height:200px;padding:2rem}.login__logo{font-size:3rem}.login__panel{max-width:none;padding:2rem 1.5rem}}

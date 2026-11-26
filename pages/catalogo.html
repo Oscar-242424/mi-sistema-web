@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Game Store | Catálogo</title>
+  <link rel="stylesheet" href="../css/styleindex.css">
+</head>
+<body>
+    <header class="header">
+    <button id="btnMenu" class="header__menu" aria-label="Abrir menú" aria-expanded="false" aria-controls="menuLateral">
+      <span></span><span></span><span></span>
+    </button>
+    <a href="inicio.html" class="header__logo">Game Store</a>
+    <nav class="header__links" aria-label="Principal">
+      <a href="inicio.html">Inicio</a>
+      <a href="catalogo.html" aria-current="page">Productos</a>
+      <a href="clientes.html">Clientes</a>
+    </nav>
+    <div class="header__usuario">
+      <span id="saludo"></span>
+      <button id="btnSalir" class="btn-linea">Cerrar sesión</button>
+    </div>
+  </header>
+
+    <div id="fondo" class="fondo" hidden></div>
+  <nav id="menuLateral" class="nav" aria-label="Categorías">
+    <button id="btnCerrar" class="nav__cerrar" aria-label="Cerrar menú">✕</button>
+    <h2>Categorías</h2>
+    <ul>
+      <li><a href="#catalogo" data-filtro="todos" class="activo">Todo</a></li>
+      <li><a href="#catalogo" data-filtro="juegos">Juegos</a></li>
+      <li><a href="#catalogo" data-filtro="consolas">Consolas</a></li>
+      <li><a href="#catalogo" data-filtro="controles">Controles</a></li>
+    </ul>
+  </nav>
+
+  <div class="layout">
+        <main class="main">
+      <section class="hero">
+        <h1>Nuevos lanzamientos</h1>
+        <p>Controles, consolas y juegos listos para jugar a precios bajos.</p>
+        <a href="#catalogo" class="btn">Ver catálogo</a>
+      </section>
+
+      <section id="catalogo" class="catalogo">
+        <div class="catalogo__cabecera">
+          <h2 id="tituloCategoria">Todo el catálogo</h2>
+          <p id="contador"></p>
+        </div>
+        <div id="productos" class="productos"></div>
+      </section>
+    </main>
+
+        <aside class="aside">
+      <section class="caja">
+        <h2>Tu carrito</h2>
+        <ul id="listaCarrito" class="carrito"></ul>
+        <p class="total">Total: <strong id="total">Bs 0</strong></p>
+        <button id="btnVaciar" class="btn-linea">Vaciar carrito</button>
+      </section>
+
+      <section id="cajaRegistro" class="caja" hidden>
+        <h2>Registrar producto</h2>
+        <form id="formProducto">
+          <label for="pNombre">Nombre</label>
+          <input type="text" id="pNombre">
+          <label for="pCategoria">Categoría</label>
+          <select id="pCategoria">
+            <option value="juegos">Juegos</option>
+            <option value="consolas">Consolas</option>
+            <option value="controles">Controles</option>
+          </select>
+          <label for="pPrecio">Precio (Bs)</label>
+          <input type="number" id="pPrecio" min="1">
+          <label for="pImagen">Imagen (opcional, ej: ../img/juego.jpg)</label>
+          <input type="text" id="pImagen">
+          <p id="msgProducto" class="msg" role="alert"></p>
+          <button type="submit" class="btn">Guardar producto</button>
+        </form>
+      </section>
+
+      <section class="caja caja--promo">
+        <h2>Envío gratis</h2>
+        <p>promocion 2 por 1.</p>
+      </section>
+    </aside>
+  </div>
+
+    <footer class="footer">
+    <p>© 2026 Game Store. Todos los derechos reservados.</p>
+    <p>Atención: lunes a sábado, 9:00 a 19:00</p>
+  </footer>
+
+  <script src="../js/datos.js"></script>
+  <script src="../js/scriptindex.js"></script>
+</body>
+</html>

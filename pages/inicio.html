@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Game Store | Inicio</title>
+  <link rel="stylesheet" href="../css/styleindex.css">
+</head>
+<body>
+  <header class="header">
+    <a href="inicio.html" class="header__logo">Game Store</a>
+    <nav class="header__links" aria-label="Principal">
+      <a href="inicio.html" aria-current="page">Inicio</a>
+      <a href="catalogo.html">Productos</a>
+      <a href="clientes.html">Clientes</a>
+    </nav>
+    <div class="header__usuario">
+      <span id="saludo"></span>
+      <button id="btnSalir" class="btn-linea">Cerrar sesión</button>
+    </div>
+  </header>
+
+  <main class="pagina">
+    <section class="hero hero--centro">
+      <h1>Bienvenido a Game Store</h1>
+      <p>Todo lo que necesitas para llevar tu experiencia gamer al siguiente nivel.</p>
+      <a href="catalogo.html" class="btn">Ver productos</a>
+    </section>
+
+    <section class="categorias" aria-label="Categorías">
+      <a class="categoria" href="catalogo.html?cat=juegos"><span class="categoria__icono">🎮</span><h2>Juegos</h2><p>Aventura, carreras y deportes</p></a>
+      <a class="categoria" href="catalogo.html?cat=consolas"><span class="categoria__icono">🖥️</span><h2>Consolas</h2><p>Tecnología para jugar</p></a>
+      <a class="categoria" href="catalogo.html?cat=controles"><span class="categoria__icono">🕹️</span><h2>Controles</h2><p>Calidad y rendimiento</p></a>
+    </section>
+
+    <section aria-labelledby="tDest">
+      <h2 id="tDest" class="titulo">Productos destacados</h2>
+      <div id="destacados" class="productos"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 Game Store. Todos los derechos reservados.</p>
+    <p>Atención: lunes a sábado, 9:00 a 19:00</p>
+  </footer>
+
+  <script src="../js/datos.js"></script>
+  <script src="../js/comun.js"></script>
+  <script src="../js/scriptinicio.js"></script>
+</body>
+</html>
